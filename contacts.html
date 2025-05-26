@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>muscle-factory | contacts</title>
+    <script
+      src="https://unpkg.com/htmx.org@1.9.10"
+      integrity="sha384-D1Kt99CQMDuVetoL1lrYwg5t+9QdHe7NLX/SoJYkXDFfX37iInKRy5xLSi8nO7UC"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="css/contacts/contacts.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header__container" data-hx-trigger="load" data-hx-swap="outerHTML" data-hx-get="global.header-top.partial.html"></div>
+        <nav class="header__nav" data-hx-trigger="load" data-hx-swap="outerHTML" data-hx-get="index.header-nav.partial.html"></nav>
+    </header>
+    <main class="contacts_main">
+        <aside class="contacts-page__sidebar" data-hx-trigger="load" data-hx-swap="outerHTML" data-hx-get="info.page-nav.partial.html"></aside>
+        <section class="contacts-page__right" data-hx-trigger="load" data-hx-swap="outerHTML" data-hx-get="contacts.page-right.partial.html"></section>
+    </main>
+    <footer>
+        <div class="footer__container" data-hx-trigger="load" data-hx-swap="outerHTML" data-hx-get="global.footer.partial.html"></div>
+    </footer>
+</body>
+</html>

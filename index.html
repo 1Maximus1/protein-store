@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>muscle-factory</title>
     <link
       rel="shortcut icon"
       href="https://placekitten.com/96/139"
@@ -14,17 +14,22 @@
       integrity="sha384-D1Kt99CQMDuVetoL1lrYwg5t+9QdHe7NLX/SoJYkXDFfX37iInKRy5xLSi8nO7UC"
       crossorigin="anonymous"
     ></script>
+    <link rel="stylesheet" href="css/index/index.css">
   </head>
   <body>
-    <header>
-        <div data-hx-trigger="load" data-hx-swap="outerHTML" data-hx-get="global.header-top.partial.html"></div>
-        <nav data-hx-trigger="load" data-hx-swap="outerHTML" data-hx-get="index.header-nav.partial.html"></nav>
+    <header class="header">
+        <div class="header__container" data-hx-trigger="load" data-hx-swap="outerHTML" data-hx-get="global.header-top.partial.html"></div>
+        <nav class="header__nav" data-hx-trigger="load" data-hx-swap="outerHTML" data-hx-get="global.header-nav.partial.html"></nav>
     </header>
     <main>
-        <section data-hx-trigger="load" data-hx-swap="outerHTML" data-hx-get="index.my-6.partial.html"></section>
-    </main>
+        <section class="promo" data-hx-trigger="load" data-hx-swap="outerHTML" data-hx-get="index.promo.partial.html"></section>
+        <section class="popular-categories" data-hx-trigger="load" data-hx-swap="outerHTML" data-hx-get="index.popular-categories.partial.html"></section>
+        <section class="hits-categories" data-hx-trigger="load" data-hx-swap="outerHTML" data-hx-get="index.hits-categories.partial.html"></section>
+        <section class="questions" data-hx-trigger="load" data-hx-swap="outerHTML" data-hx-get="index.questions.partial.html"></section> 
+        <section class="about-us" data-hx-trigger="load" data-hx-swap="outerHTML" data-hx-get="index.about-us.partial.html"></section> 
+      </main>
     <footer>
-
+        <div class="footer__container" data-hx-trigger="load" data-hx-swap="outerHTML" data-hx-get="global.footer.partial.html"></div>
     </footer>
   </body>
 </html>

@@ -1,0 +1,10 @@
+@import "../global.css";
+@import "../global.header-top.css";
+@import "../global.header-nav.css";
+@import "index.about-us.css";
+@import "index.hits-categories.css";
+@import "index.popular-categories.css";
+@import "index.promo.css";
+@import "index.questions.css";
+@import "index.contacts.css";
+@import "../global.footer.css";

@@ -1,0 +1,173 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.header__container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.header__promo,
+.header__announcement {
+  text-align: center;
+  font-size: 0.875rem;
+  line-height: 1.2;
+}
+
+/* === 2. ТЕМНАЯ ПОЛОСА (announcement) === */
+.header__announcement {
+  background-color: #3a3a3a; /* тёмно-серый */
+  color: #fff;
+  padding: 0.25rem 1rem;
+}
+
+/* === 3. НЕОНОВАЯ ПОЛОСА (promo) === */
+.header__promo {
+  background-color: #c6ff00;
+  color: #333;
+  padding: 0.25rem 1rem;
+}
+
+/* === 4. ОСНОВНОЙ БЛОК ХЕДЕРА (logo, search, контакты) === */
+.header__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fff;
+  padding: 0.5rem 1.5rem;
+}
+
+/* логотип */
+.header__logo-link img {
+  height: 32px;
+  display: block;
+}
+
+/* поиск */
+.header__search {
+  flex: 1;
+  max-width: 280px;
+  margin: 0 1rem;
+  display: flex;
+  align-items: center;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  overflow: hidden;
+}
+.header__search-input {
+  flex: 1;
+  border: none;
+  padding: 0.4rem 0.75rem;
+  font-size: 0.9rem;
+}
+.header__search-input::placeholder {
+  color: #999;
+}
+.header__search-button {
+  background: none;
+  border: none;
+  padding: 0 0.75rem;
+  cursor: pointer;
+}
+.header__search-button .icon--search {
+  width: 16px;
+  height: 16px;
+  stroke: #666;
+}
+
+/* доп. иконки и телефон */
+.header__extras {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  font-size: 0.9rem;
+  color: #333;
+}
+
+.header__icon--special .icon--life,
+.header__schedule-icon svg,
+.header__user-link svg {
+  width: 20px;
+  height: 20px;
+}
+.header__phone {
+  font-weight: 500;
+  color: #333;
+  text-decoration: none;
+}
+
+/* график работы */
+.header__schedule {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.75rem;
+  color: #333;
+}
+.header__schedule-label {
+  font-weight: 600;
+}
+.header__schedule-item {
+  white-space: nowrap;
+}
+
+/* кабинет и корзина */
+.header__user {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+.header__user-link {
+  color: #333;
+}
+.header__user-link--profile .icon--user,
+.header__user-link--cart svg {
+  width: 24px;
+  height: 24px;
+}
+
+/* === 5. НАВИГАЦИОННАЯ ПАНЕЛЬ === */
+.header__nav {
+  background-color: #8cee00;
+  padding: 0.5rem 1.5rem;
+}
+.header__nav-list {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+}
+.header__nav-link {
+  color: #333;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0.3rem 0.6rem;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+.header__nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+/* === 6. АДАПТИВНОСТЬ === */
+@media (max-width: 768px) {
+  .header__top {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .header__search {
+    order: 3;
+    width: 100%;
+    max-width: none;
+    margin: 0.5rem 0;
+  }
+  .header__extras,
+  .header__user {
+    order: 2;
+  }
+  .header__nav-list {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.75rem;
+  }
+}
